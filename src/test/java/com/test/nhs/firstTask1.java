@@ -10,19 +10,19 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class FirstTask {
+public class firstTask1 {
     @Test
     public void NhsTest() throws InterruptedException {
         WebDriverManager.chromedriver().setup();
         WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.get(ConfigReader.readProperty("QA_nhs_url"));
-       WebElement username = driver.findElement(By.id("inputEmail"));
-username.sendKeys(ConfigReader.readProperty("QA_username"));
-       WebElement password = driver.findElement(By.id("inputPassword"));
-       password.sendKeys(ConfigReader.readProperty("QA_password"));
-       WebElement signInButton=driver.findElement(By.xpath("//button[.='Sign in']"));
-       signInButton.click();
-       Assert.assertEquals("NHS patients", driver.getTitle());
+        WebElement username = driver.findElement(By.id("inputEmail"));
+        username.sendKeys(ConfigReader.readProperty("QA_username"));
+        WebElement password = driver.findElement(By.id("inputPassword"));
+        password.sendKeys(ConfigReader.readProperty("QA_password"));
+        WebElement signInButton=driver.findElement(By.xpath("//button[.='Sign in']"));
+        signInButton.click();
+        Assert.assertEquals("NHS patients", driver.getTitle());
     }
 }
