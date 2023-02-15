@@ -9,7 +9,7 @@ import io.cucumber.java.en.When;
 import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 
-public class LoginStepDef {
+public class TC_01_LoginStepDef {
 WebDriver driver= DriverHelper.getDriver();
 LoginPage loginPage=new LoginPage(driver);
     @Given("the user navigate to the NHS website")
@@ -22,7 +22,7 @@ LoginPage loginPage=new LoginPage(driver);
     }
     @When("the user enters the valid username  and valid password")
     public void the_user_enters_the_valid_username_and_valid_password() {
-loginPage.login();
+loginPage.TC_01();
     }
     @When("the user clicks the SignIn button")
     public void the_user_clicks_the_sign_in_button() {

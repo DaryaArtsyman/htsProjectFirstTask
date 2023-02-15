@@ -20,7 +20,7 @@ public class LoginPage {
     @FindBy(xpath= "//button[.='Sign in']")
     WebElement signInButton;
 
-    public void login(){
+    public void TC_01(){
         username.sendKeys(ConfigReader.readProperty("QA_username"));
         password.sendKeys(ConfigReader.readProperty("QA_password"));
 
@@ -28,5 +28,13 @@ public class LoginPage {
 public void signInButtonClick(){
         signInButton.click();
 }
+public void TC_02(){
+    username.sendKeys(ConfigReader.readProperty("QA_username"));
+    password.sendKeys("admin12");
+}
+    public void TC_03(){
+        username.sendKeys(ConfigReader.readProperty("QA_username"));
+        password.sendKeys("");
+    }
 }
 
